@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPG Website Previews</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        
+        #particles-js {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        
+        h1 {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .preview-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            width: 100%;
+            max-width: 1200px;
+            flex-wrap: wrap;
+        }
+        
+        .preview-block {
+            width: calc(50% - 15px);
+            min-width: 300px;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .preview-block:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+        }
+        
+        
+        .preview-block:before {
+            content: "";
+            display: block;
+            padding-top: 56.25%; 
+        }
+        
+        .preview-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .preview-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .preview-title {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            padding: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+
+        .preview-link {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            opacity: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .preview-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .preview-block {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+   
+    
+    <h1>UPG COMMITTEES</h1>
+    
+    <div class="preview-container">
+        
+        <div class="preview-block" onclick="window.open('https://upgitclub.rf.gd/', '_blank')">
+            <div class="preview-content">
+                <img src="https://i.ibb.co/kgtswRYc/itland.png" alt="UPG it Club" class="preview-image">
+                <div class="preview-title">UPG IT CLUB</div>
+                <a href="https://upgitclub.rf.gd/" class="preview-link" target="_blank">Visit UPGit Club</a>
+            </div>
+        </div>
+        
+        
+        <div class="preview-block" onclick="window.open('https://example2.com', '_blank')">
+            <div class="preview-content">
+                <img src="" alt="Website 2" class="preview-image">
+                <div class="preview-title">NSS</div>
+                <a href="https://example2.com" class="preview-link" target="_blank">Visit Website 2</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
